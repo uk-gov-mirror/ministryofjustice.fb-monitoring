@@ -1,6 +1,5 @@
 require 'erb'
 require 'fileutils'
-require 'debug'
 require 'yaml'
 
 RESOURCE_CONFIG_PATH = 'config/resource_config.yml'.freeze
