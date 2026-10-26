@@ -97,7 +97,7 @@ spec:
       annotations:
         message: FormBuilder User Datastore <%= env_string %> - RDS read latency > 500ms.
 
-    - alert: formbuilder-platform-<%= env_string %>-User-Datastore-HighWriteLatency
+    - alert: formbuilder-platform-<%= env_string %>-User-Datastore-RDS-HighWriteLatency
       expr: aws_rds_write_latency_average{dbinstance_identifier="<%=RESOURCE_CONFIG["#{destination}-#{env_string}"]["user-datastore"]["rds"]["dbinstance_identifier"]%>"} > 0.5
       for: 1m
       labels:
